@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const links = document.querySelectorAll('header nav ul li a');
+    
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+    
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+    
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><button class="order-now">Start Now!</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Learn Programming Faster and Easier</h1>
+                <p>Access top-quality programming tutorials and resources to enhance your skills.</p>
+                <button class="get-started">Get Started</button>
+            </div>
+            <div class="hero-image">
+                <img src="image1.png" alt="Programming Illustration">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>Find Out A Little More About Us</h2>
+            <p>We are dedicated to providing high-quality programming tutorials and resources to help you succeed in your coding journey.</p>
+            <img src="image2.png" alt="About Us Illustration">
+        </section>
+
+        <section id="services" class="services">
+            <div class="services-heading">
+                <h2>Our Services</h2>
+            </div>
+            <div class="service">
+                <h3>Quality Tutorials</h3>
+                <p>Access a wide range of tutorials covering various programming languages and frameworks.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="service">
+                <h3>Project-Based Learning</h3>
+                <p>Work on real-world projects to gain practical experience.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="service">
+                <h3>Expert Support</h3>
+                <p>Get help from experienced programmers and join a community of learners.</p>
+                <button>Learn More</button>
+            </div>
+        </section>
+
+        <section id="safety" class="safety">
+            <h2>Your Success Is Important</h2>
+            <p>Our resources are designed to ensure you get the best learning experience and succeed in your programming career.</p>
+            <img src="image3.png" alt="Safety Illustration">
+        </section>
+    </main>
+
+    <footer>
+        <div id="contact" class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: support@programming.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="github-icon.png" alt="Github"></a>
+            <a href="#"><img src="linkedin-icon.jpg" alt="LinkedIn"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
